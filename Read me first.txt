@@ -1,0 +1,14 @@
+start ul - yarn dev
+
+
+start api - npm run server
+
+
+To install go to the document folder and open index.html then navigate to document section.....
+start one by one process....so on ...
+
+
+
+Thank you
+
+I am Ygsh - contact me - if you have error.

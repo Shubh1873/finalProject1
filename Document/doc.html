@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dumb-bots Documentation - a code documentation page for buyers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="scribbler-global.css">
+  <link rel="stylesheet" href="scribbler-doc.css">
+  <link rel="author" href="humans.txt">
+</head>
+
+<body>
+  <div class="doc__bg"></div>
+  <nav class="header">
+    <h1 class="logo">Bots <span class="logo__thin">Doc</span></h1>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+      <li class="menu__item"><a href="mailto:devygsh@gmail.com">Contact me</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <aside class="doc__nav">
+      <ul>
+        <li class="js-btn selected">Get Started</li>
+      </ul>
+    </aside>
+    <article class="doc__content">
+      <section class="js-section">
+        <h3 class="section__title">Get Started</h3>
+        <p>👉Welcome to the dumb-bots and thanks for purchase.</p>
+        <p>lets start.....</p>
+        <p>If you have dumb-bot.zip file, just extract it and You will have two folder dumb-bot-api & dumb-bot</p>
+        <ol>
+          <li>Navigate to the dumb-bot folder and selected only dumb-bot-ui folder not a dumb-bot-api.</li>
+          <br>
+          <li>create your Github account <a href="https://github.com/" target="_blank" class="github">here</a></li>
+          <br>
+          <li>Download Github Desktop<a href="https://desktop.github.com/" target="_blank" class="github">here</a></li>
+          <br>
+          <li>Create github repository</li>
+          <br>
+          <img src="img/repo.png" alt="git" width="700">
+          <br>
+          <li>Then Copy all the files and folders inside the dumb-bot folder and paste file into your github repository
+            folder.</li>
+          <br>
+          <img src="img/git.png" width="700" alt="git">
+          <br>
+          <li>You will see commit to main (Just Type initial commmit) in the summary box and click button</li>
+          <br>
+          <li>Now goto your Github account & check repository, if all find then another process..</li>
+          <br>
+          <li>Go and create digitalocean account <a href="https://m.do.co/c/77ef5133b484" target="_blank"
+              class="digitalocean">click here</a> and pay 400+ something then your account will be created however
+            you don't need to worry you will get back all money you pay also you will get <u>200$</u> for free upto 60
+            days.</li>
+          <br>
+          <li>Now click to create you droplet</li>
+          <br>
+          <img src="img/step1.png" alt="step1" width="700">
+          <img src="img/step2.png" alt="step2" width="700">
+          <img src="img/step3.png" alt="step3" width="700">
+          <img src="img/step4.png" alt="step4" width="700">
+          <br>
+          <li>Now just click create droplet</li>
+          <br>
+          <li>Now copy your ip address</li>
+          <br>
+          <img src="img/copyip.png" alt="copyip" width="700">
+        </ol>
+        <br>
+        <br>
+        <h3 class="section__title">Installation.........................</h3>
+        <div class="code__block code__block--notabs">
+          <ol>
+            <li>Now click window+r key on your laptop keyboard and the type cmd and click enter</li>
+            <br>
+            <li>Type like this in your command terminal !Remember to change your ip</li>
+            <pre class="code code--block">
+            <code>
+              $ ssh root@ your ip number here
+            </code>
+          </pre>
+            <li>type yes</li>
+            <li>Now enter your password - that your created</li>
+            <li>Let's add user - type (adduser yourname)</li>
+            <pre class="code code--block">
+            <code>
+              $ adduser ygsh 
+            </code>
+          </pre>
+            <br>
+            <li>Now give permission root access to user - type usermod -aG sudo (yourname)</li>
+            <pre class="code code--block">
+            <code>
+              $ usermod -aG sudo ygsh
+            </code>
+          </pre>
+            <br>
+            <li>Let give permission for firewall - type ufw allow OpenSSH</li>
+            <pre class="code code--block">
+            <code>
+              $ ufw allow OpenSSH
+            </code>
+          </pre>
+            <br>
+            <li>Let's add firewall protection</li>
+            <pre class="code code--block">
+            <code>
+              $ ufw enable
+            </code>
+          </pre>
+            <br>
+            <li>Now open with your user not root - click window + r and then type cmd</li>
+            <pre class="code code--block">
+            <code>
+              $ ssh yourname @ your ip number
+            </code>
+          </pre>
+            <br>
+            <li>Now download node js latest version</li>
+            <pre class="code code--block">
+            <code>
+              $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            </code>
+          </pre>
+            <br>
+            <li>Setup node js now</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo apt-get install -y nodejs
+              </code>
+            </pre>
+            <br>
+            <li>Check if succesfully install node js in your droplet</li>
+            <pre class="code code--block">
+              <code>
+                $ node --version && npm --version
+              </code>
+            </pre>
+            <br>
+            <li>Now install pm2 for manage your application</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo npm i pm2 -g
+              </code>
+            </pre>
+            <br>
+            <li>Now install nginx for reverse proxy</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo apt install nginx
+              </code>
+            </pre>
+            <br>
+            <li>Now go and add your domain</li>
+            <img src="img/addDomain.png" alt="sub-domain" width="700">
+            <br>
+            <li>After add domain - create sub-domain - just click on your domain name it will redirect to record</li>
+            <img src="img/a.png" alt="a record" width="700">
+            <br>
+            <li>Now setup ip - type sudo vi /etc/nginx/sites-available/myapi.example.com</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo vi /etc/nginx/sites-available/myapi.example.com
+              </code>
+            </pre>
+            <li>Now paste this code - click (i) to insert and then paste after paste click (esc) on keyboard and (:wq)
+              enter !remember don't include bracket only :wq</li>
+            <pre class="code code--block">
+              <code>
+                server{
+                  server_name myapi.example.com;
+                
+                      location / {
+                        proxy_pass http://localhost:8001; 
+                        proxy_http_version 1.1;
+                        proxy_set_header Upgrade $http_upgrade;
+                        proxy_set_header Connection 'upgrade';
+                        proxy_set_header Host $host;
+                        proxy_cache_bypass $http_upgrade;
+                    }
+                }
+              </code>
+            </pre>
+            <br>
+            <li>Activate your sub-domain</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo ln -s /etc/nginx/sites-available/myapi.example.com /etc/nginx/sites-enabled
+              </code>
+            </pre>
+            <br>
+            <li>let see the firewall permission status</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo ufw status
+              </code>
+            </pre>
+            <br>
+            <li>let give firewall permission to Nginx</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo ufw allow 'Nginx Full'
+              </code>
+            </pre>
+            <br>
+            <li>let's remove default app running - type all this command one by one</li>
+            <pre class="code code--block">
+              <code>
+                $ cd /etc/nginx/sites-enabled
+              </code>
+            </pre>
+            <pre class="code code--block">
+              <code>
+                $ ls
+              </code>
+            </pre>
+            <pre class="code code--block">
+              <code>
+                $ sudo rm default
+              </code>
+            </pre>
+            <br>
+            <li>let upload the file - to do that your need filezilla <a href="https://filezilla-project.org/"
+                target="_blank" class="filezilla">Download filezilla</a></li>
+            <br>
+            <li>Go and login filezilla in Host (Your ip address), username (your name), password (username password not
+              a root password ok) and others are same</li>
+            <img src="img/filelog.png" alt="filezilla login" width="700">
+            <br>
+            <li>Nevigate to dumb-bot-api folder on the left side and right side will be your home/(your name)</li>
+            <br>
+            <li>Now select all the files inside dumb-bot-api folder and upload to right side</li>
+            <img src="img/home.png" alt="filezilla login" width="700">
+            <br>
+            <li>Now type this command</li>
+            <pre class="code code--block">
+              <code>
+                $ npm install
+              </code>
+            </pre>
+            <br>
+            <li>let update all packages</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo apt-get update
+              </code>
+            </pre>
+            <br>
+            <li>let install - yes crul</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo apt update && sudo apt install --assume-yes curl
+              </code>
+            </pre>
+            <br>
+            <li>most important - install this all packages to avoid error while execution</li>
+            <pre class="code code--block">
+              <code>
+                $ sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2
+                libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4
+                 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0
+                 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1
+                 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1
+                 libxtst6 ca-certificates fonts-liberation libnss3 lsb-release
+                 wget            
+              </code>
+            </pre>
+            <li>Type this command to start</li>
+            <pre class="code code--block">
+              <code>
+                $ node index.js
+              </code>
+            </pre>
+            <br>
+            <li>then check it's working find or not - go to the your browser and visit your sub-domain</li>
+            <img src="img/api.png" alt="sub-check" width="700">
+          </ol>
+        </div>
+      </section>
+      <section class="js-section">
+        <h3 class="section__title">Configuration.........................</h3>
+        <ol>
+          <li>Now time to change your api end point - just paste your sub-domain here</li>
+          <img src="img/reendPoint.png" alt="re end point" width="700">
+          <br>
+          <pre class="code code--block">
+            <code>
+              https://myapi.example.com/list
+            </code>
+          </pre>
+          <br>
+          <li>Now go to your digitalocean account and click create and navigate to app and select Github and select
+            repository name that you upload files</li>
+          <img src="img/appinstall.png" alt="app install" width="700">
+          <br>
+          <li>just next - next and you app will deploy automatically</li>
+          <br>
+          <li>After that change your domain - go to your app and navigate to setting then you will see domain section
+            click it and change it</li>
+          <li>ok now it's done</li>
+        </ol>
+      </section>
+      <section class="cus-section">
+        <h3 class="section__title">Customization.....................</h3>
+        <h4>How to target website and customize it?</h4>
+        <li>First select website -where you want to fetch data</li>
+        <pre class="code code--block">
+          This ( const result2 = await runSearch ) you will find in api.
+          <code>
+            const result2 = await runSearch( 
+              'https://example.com/',    ----- This is a website url
+              '.search-page input',      ----- This is a webiste search input box - target
+              '.search-page button',     ----- This is a website search input box - submit button
+              '.result-item .details a'  ----- This is a webiste search result - target
+          );
+          </code>
+          <p>Remember - The target value much be correct to work find, Don't have idea then go and search in youtube (puppeteer Web Scraper) you will get the idea.</p>
+          <p>If you don't know - pay me 5$ extra and i will do for you.</p>
+          <p>contact me - devygsh@gmail.com</p>
+        </pre>
+      </section>
+      <section class="cus-section">
+        <h3 class="section__title">Error Handle.....................</h3>
+        <li>If you found - (8001 port already running) then type this command</li>
+        <pre class="code code--block">
+            <code>
+              $ reboot -f
+            </code>
+          </pre>
+        <br>
+        <li>To start app in the production</li>
+        <pre class="code code--block">
+            <code>
+              $ pm2 start index.js
+            </code>
+          </pre>
+        <br>
+        <li>To stop app in the production</li>
+        <pre class="code code--block">
+            <code>
+              $ pm2 stop index.js
+            </code>
+          </pre>
+        <br>
+        <li>To automatically restart after a fix time</li>
+        <pre class="code code--block">
+          This is for 5 minute interval - every 5 minute it will restart your app for smooth search.
+            <code>
+              $ pm2 restart index.js --cron "*/5 * * * *"
+            </code>
+          </pre>
+        <br>
+        <li>To monitor your app</li>
+        <pre class="code code--block">
+              <code>
+                $ pm2 monit
+              </code>
+            </pre>
+        <br>
+        <li>To restart your reverse proxy</li>
+        <pre class="code code--block">
+            <code>
+              $ sudo service nginx restart
+            </code>
+          </pre>
+      </section>
+      <section class="cus-section">
+        <h3 class="section__title">Change the Style.....................</h3>
+        <li>I am using tailwind css</li>
+        <p>go and check out <a href="https://tailwindcss.com/" target="_blank" class="css-modify">click here</a></p>
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer">Dumb-bot<a
+      href="https://dumb-bots.online/" target="_blank" class="link link--light"> dumb-bots.online</a></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scribbler.js"></script>
+</body>
+
+</html>
